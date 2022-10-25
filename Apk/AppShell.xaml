@@ -26,24 +26,13 @@
 
 
 
-        <ShellContent
-      Title="Acerca de"
-      ContentTemplate="{DataTemplate views:about}"
-      Route="EditPage"
-       Icon="acerca.svg"
-        />
 
     </FlyoutItem>
 
 
-    <FlyoutItem Title="Gestionar citas" FlyoutIcon="gestionar.svg">
+    <FlyoutItem Title="Gestionar tareas" FlyoutIcon="gestionar.svg">
 
-        <ShellContent
-      
-      Title="Agendar cita"
-      ContentTemplate="{DataTemplate local:MainPage}"
-      Route="MainPage"
-       Icon="mas.svg" />
+       
 
         <ShellContent
       Title="Checar cita"
@@ -56,6 +45,18 @@
       ContentTemplate="{DataTemplate views:Agregar}"
       Route="EditPage"
        Icon="cancel.svg"
+        />
+
+    </FlyoutItem>
+
+    <FlyoutItem Title="Acerca de " FlyoutIcon="hometwo.svg" >
+
+        
+        <ShellContent
+      Title="Acerca de"
+      ContentTemplate="{DataTemplate views:about}"
+      Route="EditPage"
+       Icon="acerca.svg"
         />
 
     </FlyoutItem>

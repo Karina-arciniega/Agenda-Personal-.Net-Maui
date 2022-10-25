@@ -5,7 +5,19 @@
              Title="inicio">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Nombre de la tarea"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Fecha de inicio"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Fecha de cierre"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Descripcion"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

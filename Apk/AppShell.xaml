@@ -6,58 +6,58 @@
     xmlns:local="clr-namespace:Apk"
      xmlns:views="clr-namespace:Apk.Views"
      Shell.FlyoutBehavior="Flyout"
-    Shell.ForegroundColor="#623412"
-    FlyoutBackgroundColor="#ffcd71"
+    Shell.ForegroundColor="#fff"
+    FlyoutBackgroundColor="#FF6347"
+    
     Shell.TabBarUnselectedColor="White">
-
+    <!--FlyoutIcon="cal.svg"-->
     <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />-->
 
-    <FlyoutItem Title="Inicio" FlyoutIcon="hometwo.svg" >
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="60,*" Padding="20">
+                <Image Source="{Binding FlyoutIcon}" BackgroundColor="Transparent" Background="White" WidthRequest="40" HeightRequest="35"></Image>
+                <Label Grid.Column="1" Text="{Binding Title}" TextColor="White"></Label>
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+    
+    <FlyoutItem Title="Inicio" FlyoutIcon="inicio.svg" >
 
         <ShellContent
-      
       Title="Inicio"
       ContentTemplate="{DataTemplate local:MainPage}"
       Route="MainPage"
        Icon="inicio.svg" />
-
-
-
-
     </FlyoutItem>
 
 
-    <FlyoutItem Title="Gestionar tareas" FlyoutIcon="gestionar.svg">
-
-       
-
+    <FlyoutItem Title="Gestionar tareas" FlyoutIcon="agenda.svg">
         <ShellContent
-      Title="Checar cita"
+      Title="Agregar Tarea"
       ContentTemplate="{DataTemplate views:inicio}"
       Route="AddPage"
-         Icon="gestionar.svg"/>
+         Icon="mas.svg"/>
 
         <ShellContent
-      Title="cancelar cita"
+      Title="Historial de tareas"
       ContentTemplate="{DataTemplate views:Agregar}"
       Route="EditPage"
-       Icon="cancel.svg"
+       Icon="gestionar.svg"
         />
 
     </FlyoutItem>
 
-    <FlyoutItem Title="Acerca de " FlyoutIcon="hometwo.svg" >
-
-        
+    <FlyoutItem Title="Acerca de " FlyoutIcon="acerca.svg" >
         <ShellContent
       Title="Acerca de"
       ContentTemplate="{DataTemplate views:about}"
       Route="EditPage"
        Icon="acerca.svg"
         />
-
     </FlyoutItem>
 </Shell>

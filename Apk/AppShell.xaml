@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Apk.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Apk"
+     xmlns:views="clr-namespace:Apk.Views"
+     Shell.FlyoutBehavior="Flyout"
+    Shell.ForegroundColor="#623412"
+    FlyoutBackgroundColor="#ffcd71"
+    Shell.TabBarUnselectedColor="White">
+
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+
+    <FlyoutItem Title="Inicio" FlyoutIcon="hometwo.svg" >
+
+        <ShellContent
+      
+      Title="Inicio"
+      ContentTemplate="{DataTemplate local:MainPage}"
+      Route="MainPage"
+       Icon="inicio.svg" />
+
+
+
+        <ShellContent
+      Title="Acerca de"
+      ContentTemplate="{DataTemplate views:about}"
+      Route="EditPage"
+       Icon="acerca.svg"
+        />
+
+    </FlyoutItem>
+
+
+    <FlyoutItem Title="Gestionar citas" FlyoutIcon="gestionar.svg">
+
+        <ShellContent
+      
+      Title="Agendar cita"
+      ContentTemplate="{DataTemplate local:MainPage}"
+      Route="MainPage"
+       Icon="mas.svg" />
+
+        <ShellContent
+      Title="Checar cita"
+      ContentTemplate="{DataTemplate views:inicio}"
+      Route="AddPage"
+         Icon="gestionar.svg"/>
+
+        <ShellContent
+      Title="cancelar cita"
+      ContentTemplate="{DataTemplate views:Agregar}"
+      Route="EditPage"
+       Icon="cancel.svg"
+        />
+
+    </FlyoutItem>
+</Shell>

@@ -11,34 +11,39 @@
     
     Shell.TabBarUnselectedColor="White">
     <!--FlyoutIcon="cal.svg"-->
-    <!--<ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />-->
-
 
     <Shell.ItemTemplate>
         <DataTemplate>
             <Grid ColumnDefinitions="60,*" Padding="20">
-                <Image Source="{Binding FlyoutIcon}" BackgroundColor="Transparent" Background="White" WidthRequest="40" HeightRequest="35"></Image>
+                <Image Source="{Binding FlyoutIcon}" BackgroundColor="Transparent" Background="#FF6347" WidthRequest="40" HeightRequest="35"></Image>
                 <Label Grid.Column="1" Text="{Binding Title}" TextColor="White"></Label>
             </Grid>
         </DataTemplate>
     </Shell.ItemTemplate>
     
-    <FlyoutItem Title="Inicio" FlyoutIcon="inicio.svg" >
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" 
+        FlyoutItemIsVisible="False" />
+
+
+    
+    
+    <FlyoutItem Title="Inicio" FlyoutIcon="casita2.png" >
 
         <ShellContent
       Title="Inicio"
-      ContentTemplate="{DataTemplate local:MainPage}"
-      Route="MainPage"
+      ContentTemplate="{DataTemplate views:Main}"
+            
+      Route="Main"
        Icon="inicio.svg" />
     </FlyoutItem>
 
 
-    <FlyoutItem Title="Gestionar tareas" FlyoutIcon="agenda.svg">
+    <FlyoutItem Title="Gestionar metas" FlyoutIcon="reloj.png">
         <ShellContent
-      Title="Agregar Tarea"
+      Title="Agregar meta"
       ContentTemplate="{DataTemplate views:inicio}"
       Route="AddPage"
          Icon="mas.svg"/>
@@ -52,7 +57,7 @@
 
     </FlyoutItem>
 
-    <FlyoutItem Title="Acerca de " FlyoutIcon="acerca.svg" >
+    <FlyoutItem Title="Acerca de " FlyoutIcon="info2.png" >
         <ShellContent
       Title="Acerca de"
       ContentTemplate="{DataTemplate views:about}"

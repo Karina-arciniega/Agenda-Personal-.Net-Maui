@@ -16,24 +16,38 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, World!"
+                Text="INICIO DE SESION"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <Label
-                Text="Buenas tardes! Tienes 0 metas por cumplir disfruta tu dia"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            <Label 
+            Text="Usuario"
+            VerticalOptions="Center" 
+            FontSize="20"
+            HorizontalOptions="Center" />
 
-            <Button
+            <Entry x:Name="user"
+               Placeholder="Enter text"
+                />
+
+            <Label 
+            Text="Contrasena"
+            VerticalOptions="Center" 
+            FontSize="20"
+            HorizontalOptions="Center" />
+
+            <Entry x:Name="pass"
+               Placeholder="Enter text"
+                />
+
+
+            <!--<Button
                 x:Name="CounterBtn"
                 Text="Click me"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" />-->
 
         </VerticalStackLayout>
     </ScrollView>

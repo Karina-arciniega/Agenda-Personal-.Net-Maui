@@ -38,6 +38,7 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Include="Resources\Splash\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
@@ -52,15 +53,29 @@
 	  <None Remove="Resources\Images\cal.svg" />
 	  <None Remove="Resources\Images\casa.png" />
 	  <None Remove="Resources\Images\casita2.png" />
+	  <None Remove="Resources\Images\clogin.svg" />
 	  <None Remove="Resources\Images\info.png" />
 	  <None Remove="Resources\Images\info2.png" />
+	  <None Remove="Resources\Images\logoagenda.svg" />
+	  <None Remove="Resources\Images\metricas.jpg" />
+	  <None Remove="Resources\Images\metricas2.jpg" />
+	  <None Remove="Resources\Images\paisaje.jpg" />
 	  <None Remove="Resources\Images\playita.jpg" />
 	  <None Remove="Resources\Images\reloj.png" />
+	  <None Remove="Resources\Images\ulogin.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
+	  <PackageReference Include="Microsoft.VisualStudio.Utilities" Version="17.4.33103.184" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Compile Update="Views\Agregar.xaml.cs">
 	    <DependentUpon>Agregar.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Main.xaml.cs">
+	    <DependentUpon>Main.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -70,6 +85,12 @@
 	</ItemGroup>-->
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Gestionar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Home.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\inicio.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

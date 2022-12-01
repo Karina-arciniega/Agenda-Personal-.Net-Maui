@@ -1,4 +1,7 @@
-﻿namespace Apk;
+﻿using Apk.Models;
+using Apk.Views;
+
+namespace Apk;
 
 public static class MauiProgram
 {
@@ -13,6 +16,13 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		return builder.Build();
+		builder.Services.AddSingleton<inicio>();
+        builder.Services.AddSingleton<Main>();
+
+        builder.Services.AddSingleton<LoginPageViewModel>();
+        builder.Services.AddSingleton<DashboardViewModel>();
+
+        return builder.Build();
+
 	}
 }

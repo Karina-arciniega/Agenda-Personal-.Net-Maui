@@ -5,52 +5,52 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Apk"
      xmlns:views="clr-namespace:Apk.Views"
-     Shell.FlyoutBehavior="Flyout"
-    Shell.ForegroundColor="#fff"
-    FlyoutBackgroundColor="#FF6347"
-    
-    Shell.TabBarUnselectedColor="White">
-    <!--FlyoutIcon="cal.svg"-->
+    FlyoutBehavior="Flyout"
+    ForegroundColor="#fff"
+    FlyoutBackgroundColor="#fff"
+    TabBarUnselectedColor="White">
 
     <Shell.ItemTemplate>
         <DataTemplate>
             <Grid ColumnDefinitions="60,*" Padding="20">
-                <Image Source="{Binding FlyoutIcon}" BackgroundColor="Transparent" Background="#FF6347" WidthRequest="40" HeightRequest="35"></Image>
-                <Label Grid.Column="1" Text="{Binding Title}" TextColor="White"></Label>
+                <Image Source="{Binding FlyoutIcon}" BackgroundColor="Transparent" Background="Transparent" WidthRequest="40" HeightRequest="35"></Image>
+                <Label Grid.Column="1" Text="{Binding Title}" TextColor="Black"></Label>
             </Grid>
         </DataTemplate>
     </Shell.ItemTemplate>
+
+    <Shell.FlyoutHeader>
+        <StackLayout>
+            <Image
+                 Source="paisaje.jpg">
+
+            </Image>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
     
-    <ShellContent
+    <!--<ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" 
-        FlyoutItemIsVisible="False" />
+        ContentTemplate="{DataTemplate views:inicio}"
+        Route="inicio" 
+        FlyoutItemIsVisible="False" />-->
 
 
     
+   
+        <ShellContent Title="Inicio" ContentTemplate="{DataTemplate views:Main} " Route="Main" Icon="inicio.svg" />
     
-    <FlyoutItem Title="Inicio" FlyoutIcon="casita2.png" >
-
-        <ShellContent
-      Title="Inicio"
-      ContentTemplate="{DataTemplate views:Main}"
-            
-      Route="Main"
-       Icon="inicio.svg" />
-    </FlyoutItem>
-
 
     <FlyoutItem Title="Gestionar metas" FlyoutIcon="reloj.png">
         <ShellContent
       Title="Agregar meta"
-      ContentTemplate="{DataTemplate views:inicio}"
+      ContentTemplate="{DataTemplate views:Agregar}"
       Route="AddPage"
          Icon="mas.svg"/>
 
         <ShellContent
-      Title="Historial de tareas"
-      ContentTemplate="{DataTemplate views:Agregar}"
+      Title="Gestionar tareas"
+      ContentTemplate="{DataTemplate views:Gestionar}"
       Route="EditPage"
        Icon="gestionar.svg"
         />
@@ -65,4 +65,16 @@
        Icon="acerca.svg"
         />
     </FlyoutItem>
+
+
+    <Shell.FlyoutFooter>
+        <StackLayout Padding="15">
+            <Button
+                x:Name="CounterBtn"
+                Text="Cerrar Sesión"
+                SemanticProperties.Hint="Counts the number of times you click"
+                 />
+        </StackLayout>
+    </Shell.FlyoutFooter>
+    
 </Shell>

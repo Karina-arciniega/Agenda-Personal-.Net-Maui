@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
              x:Class="Apk.Views.inicio"
              Title="inicio">
-    
-    
-    <VerticalStackLayout>
-        <Label 
-            Text="Nombre de la tarea"
-            VerticalOptions="Center" 
-            FontSize="20"
-            HorizontalOptions="Center" />
 
-        <Entry x:Name="entry"
-       Placeholder="Enter text"
-       />
-       
-        <Label 
-            Text="Fecha de cierre"
-            VerticalOptions="Center"
-            FontSize="20"
-            HorizontalOptions="Center" />
+    <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
 
-       
-        
-        <Label 
-            Text="Descripcion"
-            VerticalOptions="Center"
-            FontSize="20"
-            HorizontalOptions="Center" />
+        <Image
+                Source="logoagenda.svg"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="100"
+                HorizontalOptions="Center" />
 
-        <Entry x:Name="entry2"
-       Placeholder="Enter text"
-       />
+         <Label
+                Text="Entra a tu cuenta"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="18"
+                TextColor="Gray"
+                HorizontalOptions="Center" />
+
+          <Frame Padding="10">
+                <Grid ColumnDefinitions ="25,*">
+                    <Image Source="ulogin.svg" HeightRequest="20" WidthRequest="20" ></Image>
+                    <Entry Grid.Column="1" VerticalOptions="Center" Placeholder="Nombre de usuario" Keyboard="Email" />
+                </Grid>
+          </Frame>
+
+        <Frame Padding="10">
+              <Grid ColumnDefinitions ="25,*">
+                <Image Source="clogin.svg" HeightRequest="20" WidthRequest="20" ></Image>
+                <Entry  Grid.Column="1" VerticalOptions="Center" Placeholder="Contraseña" IsPassword="True" Keyboard="Text" />
+              </Grid>
+          </Frame>
+
+        <Button Text="Entrar " WidthRequest="150" CornerRadius="20" HorizontalOptions="Center" Background="#B22222" Command="{Binding LoginCommand}" ></Button>
+
+        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
+            <Label Text="¿No tienes una cuenta?" TextColor="Gray"></Label>
+            <Label Text="Crea una cuenta aquí" TextColor="#50b3f2"></Label>
+        </StackLayout>
+
     </VerticalStackLayout>
 </ContentPage>

@@ -4,9 +4,10 @@ namespace Apk.Views;
 
 public partial class Main : ContentPage
 {
-	public Main(DashboardViewModel viewModel)
-	{
-		InitializeComponent();
-		this.BindingContext = viewModel;
-	}
+	
+    public Main(LoginPageViewModel viewModel)
+    {
+        InitializeComponent();
+        this.BindingContext = viewModel;
+    }
 }

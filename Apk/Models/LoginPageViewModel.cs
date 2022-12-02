@@ -15,7 +15,8 @@ namespace Apk.Models
 
         async void Login()
         {
-            await Shell.Current.GoToAsync($"//{nameof(Main) }");
+            await Shell.Current.GoToAsync($"//{nameof(Main)}");
+
         }
         #endregion
     }

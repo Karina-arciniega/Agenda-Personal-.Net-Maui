@@ -8,7 +8,9 @@
     FlyoutBehavior="Flyout"
     ForegroundColor="#fff"
     FlyoutBackgroundColor="#fff"
-    TabBarUnselectedColor="White">
+    TabBarUnselectedColor="White"
+    
+    >
 
     <Shell.ItemTemplate>
         <DataTemplate>
@@ -36,22 +38,22 @@
         FlyoutItemIsVisible="False" />-->
 
 
-    
-   
-        <ShellContent Title="Inicio" ContentTemplate="{DataTemplate views:Main} " Route="Main" Icon="inicio.svg" />
+
+
+    <ShellContent  Title="Inicio"  FlyoutItemIsVisible="False" ContentTemplate="{DataTemplate views:inicio} " Route="inicio" Icon="inicio.svg" />
     
 
-    <FlyoutItem Title="Gestionar metas" FlyoutIcon="reloj.png">
+    <FlyoutItem Route="Main" Title="Gestionar metas" FlyoutIcon="reloj.png" >
         <ShellContent
       Title="Agregar meta"
       ContentTemplate="{DataTemplate views:Agregar}"
-      Route="AddPage"
+      
          Icon="mas.svg"/>
 
         <ShellContent
       Title="Gestionar tareas"
       ContentTemplate="{DataTemplate views:Gestionar}"
-      Route="EditPage"
+      
        Icon="gestionar.svg"
         />
 
@@ -61,7 +63,7 @@
         <ShellContent
       Title="Acerca de"
       ContentTemplate="{DataTemplate views:about}"
-      Route="EditPage"
+      
        Icon="acerca.svg"
         />
     </FlyoutItem>

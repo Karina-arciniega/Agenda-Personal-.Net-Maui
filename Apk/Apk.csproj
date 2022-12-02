@@ -68,6 +68,8 @@
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
 	  <PackageReference Include="Microsoft.VisualStudio.Utilities" Version="17.4.33103.184" />
+	  <PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="20.3.0.59" />
+	  <PackageReference Include="Syncfusion.Licensing" Version="20.3.0.59" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -92,6 +94,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\inicio.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Principal.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
